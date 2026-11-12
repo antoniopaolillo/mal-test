@@ -8,4 +8,4 @@ Times in UTC. Built with Claude as an AI pair, as the brief permits.
 - 2026-11-12 11:30 — Scaffold: package.json (Node >= 22.18 runs .ts directly, no build step, no runtime dependencies), tsconfig, .gitignore.
 - 2026-11-12 11:37 — E6 decided: post the debit and record an exception (criterion 4 refused). Working method: tests are written first, with Claude drafting them; the core implementation is hand-written against them.
 - 2026-11-12 11:37 — Step 1: money tests written before the implementation. Decisions baked in: bigint minor units, input with excess precision is rejected, the instalment remainder goes to the last instalments, half-even rounding.
-- 2026-11-12 12:22 — Switched the whole repo to English (worklog and test comments translated; no change to test logic). Dropped the per-entry author tags from this log: the brief only asks for "timestamped, real".
+- 2026-11-12 12:46 — Step 1 implemented: src/money.ts passes all 10 money tests. Reviewed; no changes required.
