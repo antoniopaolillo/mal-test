@@ -45,6 +45,11 @@ export class Ledger {
     this.#accounts.set(accountId, currency)
   }
 
+  /** The account currency; throws if the account does not exist. */
+  currencyOf(accountId: string): Currency {
+    return this.#requireAccount(accountId)
+  }
+
   post(input: PostInput): Entry {
     return this.#append(input)
   }
