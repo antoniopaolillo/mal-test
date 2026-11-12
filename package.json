@@ -1,0 +1,17 @@
+{
+  "name": "ledger-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "In-memory, append-only account ledger core (take-home).",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.ts\"",
+    "replay": "node src/replay.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
