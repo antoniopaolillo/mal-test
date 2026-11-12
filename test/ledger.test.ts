@@ -133,3 +133,11 @@ test('reverse rejects an unknown original, a second reversal, and reversing a re
   assert.throws(() => ledger.reverse({ originalRef: 'E9', ref: 'R2', bookedDay: 6, valueDate: 2 }));
   assert.equal(ledger.entries('ACC-001').length, 7);
 });
+
+test('currencyOf returns the account currency and rejects an unknown account', () => {
+  // Added in step 3: the authorization layer must check currency before placing a hold.
+  const ledger = new Ledger();
+  ledger.openAccount('ACC-002', 'BHD');
+  assert.equal(ledger.currencyOf('ACC-002'), 'BHD');
+  assert.throws(() => ledger.currencyOf('ACC-999'));
+});
