@@ -1,7 +1,7 @@
 import type { Currency } from './money.ts'
 
 // The kind is only a label; the sign of the amount is what moves the balance.
-export type EntryKind = 'CREDIT' | 'DEBIT' | 'SETTLEMENT' | 'REVERSAL'
+export type EntryKind = 'CREDIT' | 'DEBIT' | 'SETTLEMENT' | 'REVERSAL' | 'FEE' | 'INTEREST'
 
 export interface Entry {
   readonly seq: number
