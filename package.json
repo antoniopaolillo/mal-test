@@ -7,7 +7,7 @@
   "engines": { "node": ">=22.18" },
   "scripts": {
     "test": "node --test \"test/**/*.test.ts\"",
-    "replay": "node src/replay.ts",
+    "replay": "node src/main.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
